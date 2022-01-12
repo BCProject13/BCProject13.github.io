@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+// Variables
+
+$theme-color: #212e7c;
+
+// Trenger ikke å endre - endrer seg dynamisk basert på $theme-color
+$theme-color-lighter: transparentize($theme-color, .9);
+
+
+
+
+
+
+// Global
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 77px; /* fixed header height*/
+  margin: -77px 0 0; /* negative fixed header height */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, header {
+  min-width: 320px !important;
+}
+
+a.a-link {
+  color: $theme-color;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+a.a-link:hover {
+  border-bottom: 1px solid $theme-color;
+}
+
+a.a-link-block div {
+  background-color: $theme-color !important;
+  border: 1px solid transparent;
+  transition: ease .3s;
+}
+
+a.a-link-block:hover div {
+  background-color: white !important;
+  color: $theme-color !important;
+  border: 1px solid $theme-color;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.bg-theme {
+  background-color: $theme-color !important;
+  color: white;
+}
+
+.bg-theme-secondary {
+  background-color: $theme-color-lighter;
+}
+
+.heading {
+  color: $theme-color;
+}
+
+.team-card {
+  border-top: 15px solid $theme-color;
+}
+
+
+// Team icons animation
+
+.bi {
+  color: grey;
+  font-size: 25px;
+  transition: transform 1s linear;
+}
+
+.bi:hover {
+  color: $theme-color !important;
+}
+
+
+
+
+
+
+// Header > menu toggle
+
+#btn-toggle {
+  border: none !important;
+}
+
+#btn-toggle:focus {
+  box-shadow: none !important;
+}
+
+.bi-x {
+  display: none;
+}
+
+.on .bi-x {
+  display: block;
+}
+
+.on .bi-list {
+  display: none;
+}
+
+
+
+
+
+// Sections
+
+.project-section {
+  min-height: 100vh;
+}
+
+.team-section {
+  min-height: calc(100vh - 56px);
+}

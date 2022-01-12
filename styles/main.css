@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 77px;
+  /* fixed header height*/
+  margin: -77px 0 0;
+  /* negative fixed header height */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, header {
+  min-width: 320px !important;
+}
+
+a.a-link {
+  color: #212e7c;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+a.a-link:hover {
+  border-bottom: 1px solid #212e7c;
+}
+
+a.a-link-block div {
+  background-color: #212e7c !important;
+  border: 1px solid transparent;
+  transition: ease 0.3s;
+}
+
+a.a-link-block:hover div {
+  background-color: white !important;
+  color: #212e7c !important;
+  border: 1px solid #212e7c;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.bg-theme {
+  background-color: #212e7c !important;
+  color: white;
+}
+
+.bg-theme-secondary {
+  background-color: rgba(33, 46, 124, 0.1);
+}
+
+.heading {
+  color: #212e7c;
+}
+
+.team-card {
+  border-top: 15px solid #212e7c;
+}
+
+.bi {
+  color: grey;
+  font-size: 25px;
+  transition: transform 1s linear;
+}
+
+.bi:hover {
+  color: #212e7c !important;
+}
+
+#btn-toggle {
+  border: none !important;
+}
+
+#btn-toggle:focus {
+  box-shadow: none !important;
+}
+
+.bi-x {
+  display: none;
+}
+
+.on .bi-x {
+  display: block;
+}
+
+.on .bi-list {
+  display: none;
+}
+
+.project-section {
+  min-height: 100vh;
+}
+
+.team-section {
+  min-height: calc(100vh - 56px);
+}
+
+/*# sourceMappingURL=main.css.map */
